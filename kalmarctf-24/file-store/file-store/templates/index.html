@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>File Store</title>
+		<link rel="stylesheet" href="static/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">File Store</div>
+			<form action = "/" method = "POST" enctype = "multipart/form-data">
+				<input type = "file" name = "file" />
+				<input type = "submit" value="Upload"/>
+			</form>
+			<div class="files">
+				{% for name in files %}
+					<a href="{{path}}/{{name}}">{{name}}</a>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html>
